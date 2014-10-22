@@ -39,4 +39,4 @@ capabilities = {
 
 ### Browser options:
 
-The list of operaOptions for Android is similar to [desktop options](./desktop.md#options) with some additional options described in [android-products.md](./android-products.md)
+The list of operaOptions for Android is similar to [desktop options](./desktop.md#options).
