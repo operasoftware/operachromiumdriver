@@ -3,7 +3,7 @@
 ```python
 # Create OperaDriver service:
 from selenium.webdriver.chrome import service
-webdriver_service = service.Service(opera_driver_exe_path)
+webdriver_service = service.Service('path/to/operadriver')
 ```
 
 
