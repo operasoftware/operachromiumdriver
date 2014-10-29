@@ -11,8 +11,8 @@ from selenium.webdriver.support import expected_conditions as ExpectedConditions
 
 ######## WEB DRIVER INITIALIZATION #############################
 desired_caps = {
-    'chromedriverExecutable' : '/home/ela/WEBDRIVER/bin/operadriver', #download from https://github.com/operasoftware/operachromiumdriver/releases
-    'app' : '/home/ela/WEBDRIVER/test/opera-browser.apk', #download it from http://www.opera.com/mobile/operabrowser/android
+    'chromedriverExecutable' : 'path/to/operadriver', #download from https://github.com/operasoftware/operachromiumdriver/releases
+    'app' : 'path/to/opera-browser.apk', #download it from http://www.opera.com/mobile/operabrowser/android
 }
 
 driver = OperaAppiumDriver('http://localhost:4723/wd/hub', desired_caps)

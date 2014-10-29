@@ -13,8 +13,8 @@ desired_caps['automationName'] = 'selendroid'
 desired_caps['platformName'] = 'Android'
 desired_caps['deviceName'] = ''
 
-desired_caps['chromedriverExecutable'] = '/home/ela/WEBDRIVER/bin/operadriver' #download from https://github.com/operasoftware/operachromiumdriver/releases
-desired_caps['app'] = os.path.abspath('/home/ela/WEBDRIVER/test/opera-browser.apk') #download it from http://www.opera.com/mobile/operabrowser/android
+desired_caps['chromedriverExecutable'] = 'path/to/operadriver' #download from https://github.com/operasoftware/operachromiumdriver/releases
+desired_caps['app'] = os.path.abspath('path/to/opera-browser.apk') #download it from http://www.opera.com/mobile/operabrowser/android
 desired_caps['appPackage'] = 'com.opera.browser'
 desired_caps['androidDeviceSocket'] = 'opera_devtools_remote'
 
