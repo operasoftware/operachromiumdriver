@@ -20,11 +20,11 @@ driver = OperaAppiumDriver('http://localhost:4723/wd/hub', desired_caps)
 
 ######## TEST ##################################################
 driver.skip_introduction_guide()
-driver.open_page_in_native_context("http://www.google.pl")
+driver.open_page_in_native_context("https://www.google.com/")
 
 driver.switch_to.context('CHROMIUM')
 
-driver.get("http://www.google.pl")
+driver.get("https://www.google.com/")
 text_input = WebDriverWait(driver, 10).until(ExpectedConditions.element_to_be_clickable((By.NAME, "q")))
 text_input.send_keys('OperaDriver\n')
 

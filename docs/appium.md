@@ -1,7 +1,12 @@
-#Appium
+# Appium
 
-Using [Appium](http://appium.io/) makes the test app able to swicth between the native wne web contexts. The native contexts is the context of user interface. In this conext the test app is able to dismiss some native Opera dialogs (for example the 'Remember password' dialog). The web context is for web pages testing.  
-For now to start tests for Opera with Appium several capabilities are needed. This will change soon and you be able to use only 'opera' browserName like for other supported browsers.
+Using [Appium](http://appium.io/) makes the test app able to switch between the native and web contexts.
+
+The *native context* is the context of the user interface. In this context the test app is able to dismiss some native Opera dialogs such as the “Remember password” dialog.
+
+The *web context* is intended to be used for web page testing.
+
+For now, to start tests for Opera with Appium several capabilities are needed. This will change soon and you be able to use only `'opera'` `browserName` like for other supported browsers.
 
 Typical setup:
 
@@ -12,9 +17,7 @@ desired_caps['appPackage'] = 'com.opera.browser'
 desired_caps['androidDeviceSocket'] = 'opera_devtools_remote'
 ```
 
-
-
-###Complete example with context switching:
+## Complete example with context switching
 
 ```python
 import os
@@ -37,9 +40,7 @@ desired_caps['app'] = os.path.abspath('opera-browser.apk')
 desired_caps['appPackage'] = 'com.opera.browser'
 desired_caps['androidDeviceSocket'] = 'opera_devtools_remote'
 
-
 driver = webdriver.Remote('http://localhost:4723/wd/hub', desired_caps)
-
 
 ######## UTILITIES                 #############################
 def swipe_left(duration=1):
@@ -57,8 +58,6 @@ def get_element_id(el_id):
 def find_element_by_id(el_id):
     el_id = get_element_id(el_id)
     return driver.find_element_by_id(el_id)
-
-
 
 ######## TEST                      #############################
 def skip_introduction_guide():
@@ -79,7 +78,7 @@ def close_native_dialog():
 
 
 skip_introduction_guide()
-open_page_in_native_context("http://www.google.pl")
+open_page_in_native_context("https://www.google.com/")
 
 print "*** VIEW HANDLES: ***"
 for h in driver.contexts:
@@ -92,7 +91,7 @@ if not 'CHROMIUM' in driver.contexts:
 
 driver.switch_to.context('CHROMIUM')
 
-driver.get("http://www.google.pl")
+driver.get("https://www.google.com/")
 input_text = driver.find_element_by_name('q')
 input_text.send_keys('OperaDriver\n')
 
@@ -103,10 +102,9 @@ time.sleep(5) #just to see the dialog is closed
 driver.quit()
 ```
 
+### Running with Selendroid instead of UIAutomator
 
-
-###Run with selendroid instead of uiautomator:
-To use Appium  on Android older than 4.2 use the Selendroid automation. To do it configure the same setup but with:
+To use Appium on Android older than 4.2 use the Selendroid automation. To do it, configure the same setup but with:
 
 ```python
 desired_caps['automationName'] = 'selendroid'

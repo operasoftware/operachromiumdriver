@@ -9,7 +9,7 @@ webdriver_service.start()
 
 driver = webdriver.Remote(webdriver_service.service_url, webdriver.DesiredCapabilities.OPERA)
 
-driver.get('http://www.google.pl')
+driver.get('https://www.google.com/')
 input_txt = driver.find_element_by_name('q')
 input_txt.send_keys('operadriver\n')
 

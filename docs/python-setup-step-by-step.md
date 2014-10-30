@@ -1,43 +1,45 @@
-#Step by step instructions for python setup
+# Step by step instructions for Python setup
 
-##Python
-* install python
-* install/upgrade [python bindings](http://selenium-python.readthedocs.org/en/latest/installation.html), (no need to install the Selenium server).
+## Python
 
-##Desktop
+* install Python
+* install/upgrade [Python bindings](http://selenium-python.readthedocs.org/en/latest/installation.html) (no need to install the Selenium server)
+
+## Desktop
+
 * install Opera in the default location
 
+## Android
 
-##Android
-* install android sdk tools (go [here](http://developer.android.com/sdk/index.html) -> VIEW ALL DOWNLOADS AND SIZES -> Sdk Tools only)
-* run  ` .../android-sdk/tools/android sdk`
+* install Android DSK tools: <http://developer.android.com/sdk/index.html> → _View all downloads and sizes_ → _SDK Tools only_)
+* run ` .../android-sdk/tools/android sdk`
     + check ‘Android SDK Platform-tools’
     + ‘Google USB Driver’ (for Windows)
     + click ‘install’
-* add `.../android-sdk/platform-tools` to PATH environment variable
+* add `.../android-sdk/platform-tools` to the `PATH` environment variable
 * install drivers for the device
-* run adb devices to make sure if your device is available
-
+* run `adb devices` to make sure if your device is available
 * download Opera apk (link)
-* install Opera on a device (when using pure selenium)
+* install Opera on the device (when using pure Selenium)
 
-###Appium:
+### Appium
+
 * install Appium
-* initialize Appium (./reset.sh --selendroid --android)
+* initialize Appium: `./reset.sh --selendroid --android`
 
+## Driver
 
-##Driver
 * download OperaDriver
 * set execution permissions
-* add location to PATH
+* add location to `PATH`
 
-##Run example
-For Android use [pure selenium](../examples/android.py) or [Appium](../examples/appium_simple.py)  
-Desktop example: [desktop.py](../examples/desktop.py)
+## Run example
 
+For Android use [pure Selenium](../examples/android.py) or [Appium](../examples/appium_simple.py).
+Desktop example: [desktop.py](../examples/desktop.py).
 
-##Troubleshooting
+## Troubleshooting
 
-###Desktop
-if you get the ‘cannot find Opera binary’ error, use the ‘binary’ option in operaOptions as shown in [desktop.md](desktop.md)
+### Desktop
 
+If you get the “cannot find Opera binary” error, use the `binary` option in `operaOptions` as shown in [`desktop.md`](desktop.md).

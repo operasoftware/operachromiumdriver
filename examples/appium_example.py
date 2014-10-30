@@ -60,7 +60,7 @@ def close_native_dialog():
 
 
 skip_introduction_guide()
-open_page_in_native_context("http://www.google.pl")
+open_page_in_native_context("https://www.google.com/")
 
 print "*** VIEW HANDLES: ***"
 for h in driver.contexts:
@@ -73,7 +73,7 @@ if not 'CHROMIUM' in driver.contexts:
 
 driver.switch_to.context('CHROMIUM')
 
-driver.get("http://www.google.pl")
+driver.get("https://www.google.com/")
 text_input = WebDriverWait(driver, 10).until(ExpectedConditions.element_to_be_clickable((By.NAME, "q")))
 text_input.send_keys('OperaDriver\n')
 

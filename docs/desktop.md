@@ -1,6 +1,8 @@
-For now to drive the Chromium based Opera you’ll need to use the RemoteWebDriver. Python examples are provided belov. For other languages please refer to the [Selenium docs](http://docs.seleniumhq.org/docs/04_webdriver_advanced.jsp#remotewebdriver).
+# Desktop
 
-### Creating an OperaDriver service
+For now to drive the Chromium-based Opera you’ll need to use the `RemoteWebDriver`. Python examples are provided below. For other languages please refer to the [Selenium docs](http://docs.seleniumhq.org/docs/04_webdriver_advanced.jsp#remotewebdriver).
+
+## Creating an OperaDriver service
 
 ```python
 # Create OperaDriver service:
@@ -8,7 +10,6 @@ from selenium.webdriver.chrome import service
 webdriver_service = service.Service(opera_driver_exe_path,
                                         port_on_which_service_will_be_running)
 ```
-
 
 ### Creating a remote webdriver
 

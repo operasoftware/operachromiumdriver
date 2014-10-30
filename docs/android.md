@@ -1,4 +1,6 @@
-### Creating OperaDriver service:
+# Android
+
+## Creating an OperaDriver service
 
 ```python
 # Create OperaDriver service:
@@ -6,8 +8,7 @@ from selenium.webdriver.chrome import service
 webdriver_service = service.Service('path/to/operadriver')
 ```
 
-
-### Create remote webdriver.
+## Creating a remote webdriver
 
 ```python
 # Create remote webdriver:
@@ -17,26 +18,28 @@ remote = webdriver.Remote(webdriver_service, capabilities)
 
 Depending on capabilites OperaDriver may be connected to the browser in two ways.
 
-1. Let OperaDriver start Opera.
-```python
-capabilities = {
-    'operaOptions': {
-        'androidPackage': 'com.opera.browser'
-        }
-}
-```
+  1. Let OperaDriver start Opera.
 
-1. Attach to the existing Opera instance.
-```python
-capabilities = {
-    'operaOptions': {
-        'androidPackage': 'com.opera.browser'
-        'androidUseRunningPackage' : true,
-        }
-}
-```
+  ```python
+  capabilities = {
+      'operaOptions': {
+          'androidPackage': 'com.opera.browser'
+      }
+  }
+  ```
+
+  2. Attach to the existing Opera instance.
+
+  ```python
+  capabilities = {
+      'operaOptions': {
+          'androidPackage': 'com.opera.browser',
+          'androidUseRunningPackage': true
+      }
+  }
+  ```
 
 
-### Browser options:
+## Browser options
 
-The list of operaOptions for Android is similar to [desktop options](./desktop.md#options).
+The list of `operaOptions` for Android is similar to [the available desktop options](./desktop.md#browser-options).
