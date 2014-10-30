@@ -20,31 +20,31 @@ remote = webdriver.Remote(webdriver_service, capabilities)
 
 Depending on capabilites OperaDriver may be connected to the browser in several ways.
 
-1.   Let the driver start a given Opera executable.
+  1. Let the driver start a given Opera executable.
 
-```python
-capabilities = {
-    'operaOptions': {
-        'binary': opera_exe_path
-    }
-}
-```
+  ```python
+  capabilities = {
+      'operaOptions': {
+          'binary': opera_exe_path
+      }
+  }
+  ```
 
-2.   Let the driver auto-detect the Opera executable’s location and start it.
+  2. Let the driver auto-detect the Opera executable’s location and start it.
 
-```python
-capabilities = { }
-```
+  ```python
+  capabilities = { }
+  ```
 
-3.   Attach to the existing Opera instance. This requires running Opera with `--remote-debugging-port=port`.
+  3. Attach to the existing Opera instance. This requires running Opera with `--remote-debugging-port=port`.
 
-```python
-capabilities = {
-    'operaOptions': {
-        'debuggerAddress': port # Same port as passed to the Opera.
-    }
-}
-```
+  ```python
+  capabilities = {
+      'operaOptions': {
+          'debuggerAddress': port # Same port as passed to the Opera.
+      }
+  }
+  ```
 
 ### Browser options
 
