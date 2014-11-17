@@ -30,7 +30,6 @@
 ## Driver
 
 * download OperaDriver
-* set execution permissions
 * add location to `PATH`
 
 ## Run example
