@@ -33,7 +33,7 @@ class OperaAppiumDriver(AppiumDriver):
         flick.perform();
 
     def get_element_id(self, el_id):
-        if self._desired_caps['automationName'].lower() == 'android':
+        if self._desired_caps['automationName'].lower() == 'android' and self.context == "NATIVE_APP":
             el_id = "com.opera.android.browser:id/" + el_id
         return el_id
 
