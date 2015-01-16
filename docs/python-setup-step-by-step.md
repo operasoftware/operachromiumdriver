@@ -19,8 +19,9 @@
 * add `.../android-sdk/platform-tools` to the `PATH` environment variable
 * install drivers for the device
 * run `adb devices` to make sure if your device is available
-* download Opera apk (link)
+* download Opera apk from [here](http://www.opera.com/mobile/operabrowser/android)
 * install Opera on the device (when using pure Selenium)
+* run `adb shell "echo 'opera --enable-remote-debugging' &> /data/local/tmp/opera-browser-command-line"` (_This is needed temporarily until [this](https://github.com/appium/appium/pull/3819) is merged to Appium_)
 
 ### Appium
 
