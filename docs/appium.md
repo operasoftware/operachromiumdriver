@@ -14,7 +14,7 @@ Typical setup:
 desired_caps['chromedriverExecutable'] = '/absolute/path/to/operadriver' #download from https://github.com/operasoftware/operachromiumdriver/releases
 desired_caps['app'] = os.path.abspath('opera-browser.apk') #path to Opera apk - download from http://www.opera.com/mobile/operabrowser/android
 desired_caps['appPackage'] = 'com.opera.browser'
-desired_caps['androidDeviceSocket'] = 'opera_devtools_remote'
+desired_caps['androidDeviceSocket'] = desired_caps['appPackage'] + '.devtools'
 ```
 
 ## Complete example with context switching
@@ -38,7 +38,7 @@ desired_caps['deviceName'] = ''
 desired_caps['chromedriverExecutable'] = '/absolute/path/to/operadriver'
 desired_caps['app'] = os.path.abspath('opera-browser.apk')
 desired_caps['appPackage'] = 'com.opera.browser'
-desired_caps['androidDeviceSocket'] = 'opera_devtools_remote'
+desired_caps['androidDeviceSocket'] = desired_caps['appPackage'] + '.devtools'
 
 driver = webdriver.Remote('http://localhost:4723/wd/hub', desired_caps)
 

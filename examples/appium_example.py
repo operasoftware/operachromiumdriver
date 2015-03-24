@@ -16,7 +16,7 @@ desired_caps['deviceName'] = ''
 desired_caps['chromedriverExecutable'] = 'path/to/operadriver' #download from https://github.com/operasoftware/operachromiumdriver/releases
 desired_caps['app'] = os.path.abspath('path/to/opera-browser.apk') #download it from http://www.opera.com/mobile/operabrowser/android
 desired_caps['appPackage'] = 'com.opera.browser'
-desired_caps['androidDeviceSocket'] = 'opera_devtools_remote'
+desired_caps['androidDeviceSocket'] = desired_caps['appPackage'] + '.devtools'
 
 
 driver = webdriver.Remote('http://localhost:4723/wd/hub', desired_caps)

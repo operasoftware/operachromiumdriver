@@ -15,7 +15,7 @@ class OperaAppiumDriver(AppiumDriver):
             'deviceName' : '',
 
             'appPackage' : 'com.opera.browser',
-            'androidDeviceSocket' : 'opera_devtools_remote',
+            'androidDeviceSocket' : 'com.opera.browser.devtools',
         }
         if desired_capabilities:
             capabilities.update(desired_capabilities)
