@@ -1,5 +1,13 @@
 # Android
 
+## Enabling remote debugging
+
+You need to create the command line file for Opera for Android and enable remote debugging:
+
+```
+adb shell "echo 'opera --enable-remote-debugging' &> /data/local/tmp/opera-browser-command-line"
+```
+
 ## Creating an OperaDriver service
 
 ```python
