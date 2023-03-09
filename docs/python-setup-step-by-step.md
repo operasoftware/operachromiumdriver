@@ -36,7 +36,10 @@
 ## Run example
 
 For Android use [pure Selenium](../examples/android.py) or [Appium](../examples/appium_simple.py).
-Desktop example: [desktop.py](../examples/desktop.py).
+
+Desktop example for selenium 2 and selenium 3: [desktop_selenium_2.x_and_3.x.py](../examples/desktop_selenium_2.x_and_3.x.py).
+
+Desktop example for selenium 4: [desktop_selenium_4.x.py](../examples/desktop_selenium_4.x.py).
 
 ## Troubleshooting
 

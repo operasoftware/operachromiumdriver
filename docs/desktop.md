@@ -5,13 +5,28 @@ For now to drive the Chromium-based Opera you’ll need to use the `RemoteWebDri
 ## Creating an OperaDriver service
 
 ```python
-# Create OperaDriver service:
+# Create and start OperaDriver service:
 from selenium.webdriver.chrome import service
 webdriver_service = service.Service(opera_driver_exe_path,
                                         port_on_which_service_will_be_running)
+webdriver_service.start()
+```
+### Creating a remote webdriver for selenium 4
+
+```python
+# Create OperaDriver options:
+from selenium import webdriver
+options = webdriver.ChromeOptions()
+options.binary_location = opera_exe_path
+options.add_experimental_option('w3c', True)
 ```
 
-### Creating a remote webdriver
+```python
+# Create remote webdriver
+remote = webdriver.Remote(webdriver_service.service_url, options=options)
+```
+
+### Creating a remote webdriver for selenium 2, 3
 
 ```python
 # Create remote webdriver:
